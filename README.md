@@ -10,6 +10,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 - Создайте .env файл в директории проекта (можно скопировать данные из .env.template)
+cp .env.template .env
 
 - Перейдите в каталог infra/
 cd metasharks_test/infra
