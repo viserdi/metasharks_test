@@ -16,7 +16,7 @@ cp .env.template .env
 cd infra/
 
 - Создайте образы и Соберите контейнеры
-docker-compose up
+docker-compose up -d --build
 
 - Выполните миграции, создайте суперюзера, соберите статику 
 docker-compose exec web python manage.py migrate
