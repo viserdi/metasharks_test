@@ -13,7 +13,7 @@ source venv/bin/activate
 cp .env.template .env
 
 - Перейдите в каталог infra/
-cd metasharks_test/infra
+cd infra/
 
 - Создайте образы и Соберите контейнеры
 docker-compose up
