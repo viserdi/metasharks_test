@@ -10,19 +10,20 @@ python3 -m venv venv
 source venv/bin/activate
 
 - Создайте .env файл в директории проекта (можно скопировать данные из .env.template)
+cp .env.template .env
 
 - Перейдите в каталог infra/
-cd metasharks_test/infra
+cd infra/
 
 - Создайте образы и Соберите контейнеры
-docker-compose up
+docker-compose up -d --build
 
 - Выполните миграции, создайте суперюзера, соберите статику 
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 
-- при необзодимости заполните базу авто (марки и модели)
+- при необходимости заполните базу авто (марки и модели)
 docker-compose exec web python manage.py cars_fill_db
 ```
 ## Как работает проект:
