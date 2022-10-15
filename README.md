@@ -23,7 +23,7 @@ docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 
-- при необзодимости заполните базу авто (марки и модели)
+- при необходимости заполните базу авто (марки и модели)
 docker-compose exec web python manage.py cars_fill_db
 ```
 ## Как работает проект:
